@@ -2,6 +2,7 @@
 import React from 'react';
 import { Book } from '../types';
 import { Library, ExternalLink, Hash, ShoppingCart } from 'lucide-react';
+import { getBookCoverUrl } from '../utils/bookCover';
 
 interface BookCardProps {
   book: Book;
@@ -13,26 +14,26 @@ const BookCard: React.FC<BookCardProps> = ({ book, onTagClick }) => {
     <div className="group bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-stone-200 flex flex-col h-full relative">
       <div className="relative aspect-[3/4] overflow-hidden bg-stone-100">
         <img
-          src={book.coverImage}
+          src={getBookCoverUrl(book)}
           alt={book.title}
           className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors"></div>
       </div>
-      
+
       <div className="p-3.5 flex flex-col flex-grow">
         <span className="text-rose-700 text-[9px] font-bold tracking-widest uppercase mb-1">{book.author}</span>
         <h3 className="text-sm font-bold text-stone-900 serif mb-1.5 group-hover:text-rose-800 transition-colors leading-tight line-clamp-2 min-h-[2.5rem]">
           {book.title}
         </h3>
-        
+
         {/* Tags Section - Clickable */}
         {book.tags && book.tags.length > 0 && (
           <div className="flex flex-wrap gap-1 mb-2.5">
             {book.tags.map((tag) => (
-              <button 
-                key={tag} 
+              <button
+                key={tag}
                 onClick={(e) => {
                   e.preventDefault();
                   onTagClick?.(tag);
@@ -49,7 +50,7 @@ const BookCard: React.FC<BookCardProps> = ({ book, onTagClick }) => {
         <p className="text-stone-600 text-[11px] leading-relaxed mb-3 line-clamp-3 flex-grow">
           {book.description}
         </p>
-        
+
         <div className="pt-2.5 border-t border-stone-100">
           <div className="grid grid-cols-2 gap-2">
             <a
@@ -61,7 +62,7 @@ const BookCard: React.FC<BookCardProps> = ({ book, onTagClick }) => {
               <ShoppingCart size={10} />
               <span>網路購書</span>
             </a>
-            
+
             <a
               href={book.links.nlpi}
               target="_blank"
