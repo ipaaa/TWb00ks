@@ -109,14 +109,15 @@ function parseAdultCsv(csvData) {
   const lines = csvData.split(/\r?\n/);
   const books = [];
 
-  // Adult Header: 排序,書名,分類,作者,出版年,初中高階,博客來,金石堂,誠品,是否列入
+  // Adult Header: 分類中排序,書名,分類,作者,出版年,初中高階,博客來,簡介,金石堂,誠品,是否列入
   for (let i = 1; i < lines.length; i++) {
     const line = lines[i].trim();
     if (!line) continue;
 
     const cols = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(c => c.replace(/^"|"$/g, '').trim());
-    // Col 0 is "排序"
-    const [sortOrderStr, title, category, author, year, level, booksUrl, kingstoneUrl, esliteUrl, include] = cols;
+    // Col 0 is "分類中排序"
+    // Adult Header indices: 0:排序, 1:書名, 2:分類, 3:作者, 4:出版年, 5:初中高階, 6:博客來, 7:簡介, 8:金石堂, 9:誠品, 10:是否列入
+    const [sortOrderStr, title, category, author, year, level, booksUrl, description, kingstoneUrl, esliteUrl, include] = cols;
 
     if (!title || title === '書名' || title.includes('新增以下書目')) continue;
 
@@ -137,11 +138,8 @@ function parseAdultCsv(csvData) {
       id: `sheet-${i}`,
       title: title,
       author: author || '未知作者',
-      description: `${title} - ${category || ''}`,
-      coverImage: coverUrl || undefined, // undefined to allow fallback or placeholder in UI logic if needed, but user said "re-fix".
-      // actually, if getCoverFromUrl returns null, it means we don't have a valid product ID.
-      // User said "remove existing google book api".
-      // So if null, let it be null/undefined to hit the UI fallback (placeholder).
+      description: description || `${title} - ${category || ''}`,
+      coverImage: coverUrl || undefined,
       level: mappedLevel,
       tags: category ? category.split(',').map(t => t.trim()) : [],
       links: {

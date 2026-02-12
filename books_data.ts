@@ -1,11 +1,28 @@
 export const sheetData = {
-  "lastUpdated": "2026-02-12T22:38:13.139Z",
+  "lastUpdated": "2026-02-12T23:45:08.040Z",
   "books": [
+    {
+      "id": "sheet-12",
+      "title": "一個春天的童話：小說亮均、亭均",
+      "author": "李敏勇",
+      "description": "李敏勇小說，隱喻戰後兩代人在政治創傷中的對話與救贖。",
+      "coverImage": "https://www.books.com.tw/img/001/104/24/0011042499.jpg",
+      "level": "basic",
+      "tags": [
+        "文學"
+      ],
+      "links": {
+        "books": "https://www.books.com.tw/products/0011042499?sloc=main",
+        "eslite": "https://www.eslite.com/Search?q=%E4%B8%80%E5%80%8B%E6%98%A5%E5%A4%A9%E7%9A%84%E7%AB%A5%E8%A9%B1%EF%BC%9A%E5%B0%8F%E8%AA%AA%E4%BA%AE%E5%9D%87%E3%80%81%E4%BA%AD%E5%9D%87",
+        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E4%B8%80%E5%80%8B%E6%98%A5%E5%A4%A9%E7%9A%84%E7%AB%A5%E8%A9%B1%EF%BC%9A%E5%B0%8F%E8%AA%AA%E4%BA%AE%E5%9D%87%E3%80%81%E4%BA%AD%E5%9D%87",
+        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E4%B8%80%E5%80%8B%E6%98%A5%E5%A4%A9%E7%9A%84%E7%AB%A5%E8%A9%B1%EF%BC%9A%E5%B0%8F%E8%AA%AA%E4%BA%AE%E5%9D%87%E3%80%81%E4%BA%AD%E5%9D%87"
+      }
+    },
     {
       "id": "sheet-16",
       "title": "少年臺灣史",
       "author": "周婉窈",
-      "description": "少年臺灣史 - 通論",
+      "description": "觀點具主體性且流暢，涵蓋原民到當代，認識土地最佳入門。",
       "coverImage": "https://www.books.com.tw/img/001/083/43/0010834309.jpg",
       "level": "basic",
       "tags": [
@@ -22,7 +39,7 @@ export const sheetData = {
       "id": "sheet-17",
       "title": "台灣人四百年史",
       "author": "史明",
-      "description": "台灣人四百年史 - 通論",
+      "description": "史明畢生心血，從被殖民者立場建構獨派史觀的經典論述。",
       "coverImage": "https://www.books.com.tw/img/001/076/86/0010768686.jpg",
       "level": "basic",
       "tags": [
@@ -36,28 +53,10 @@ export const sheetData = {
       }
     },
     {
-      "id": "sheet-20",
-      "title": "百年追求：台灣民主運動的故事",
-      "author": "陳翠蓮、吳乃德、胡慧玲",
-      "description": "百年追求：台灣民主運動的故事 - 通論, 民主運動",
-      "coverImage": "https://www.books.com.tw/img/001/061/12/0010611223.jpg",
-      "level": "basic",
-      "tags": [
-        "通論",
-        "民主運動"
-      ],
-      "links": {
-        "books": "https://www.books.com.tw/products/0010611223?sloc=main",
-        "eslite": "https://www.eslite.com/Search?q=%E7%99%BE%E5%B9%B4%E8%BF%BD%E6%B1%82%EF%BC%9A%E5%8F%B0%E7%81%A3%E6%B0%91%E4%B8%BB%E9%81%8B%E5%8B%95%E7%9A%84%E6%95%85%E4%BA%8B",
-        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E7%99%BE%E5%B9%B4%E8%BF%BD%E6%B1%82%EF%BC%9A%E5%8F%B0%E7%81%A3%E6%B0%91%E4%B8%BB%E9%81%8B%E5%8B%95%E7%9A%84%E6%95%85%E4%BA%8B",
-        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E7%99%BE%E5%B9%B4%E8%BF%BD%E6%B1%82%EF%BC%9A%E5%8F%B0%E7%81%A3%E6%B0%91%E4%B8%BB%E9%81%8B%E5%8B%95%E7%9A%84%E6%95%85%E4%BA%8B"
-      }
-    },
-    {
       "id": "sheet-22",
       "title": "無法送達的遺書：記那些在恐怖年代失落的人",
       "author": "呂蒼一",
-      "description": "無法送達的遺書：記那些在恐怖年代失落的人 - 白恐, 人物",
+      "description": "受難者死刑前絕筆，字字血淚，展現對家人的愛與理想堅持。",
       "coverImage": "https://www.books.com.tw/img/001/092/65/0010926548.jpg",
       "level": "basic",
       "tags": [
@@ -75,7 +74,7 @@ export const sheetData = {
       "id": "sheet-23",
       "title": "義光教會相關人物訪談錄",
       "author": "陳儀深等",
-      "description": "義光教會相關人物訪談錄 - 民主運動, 人物",
+      "description": "訪談林宅血案地相關人物，紀錄信仰如何支撐民主運動。",
       "coverImage": "https://www.books.com.tw/img/001/099/25/0010992500.jpg",
       "level": "basic",
       "tags": [
@@ -90,27 +89,28 @@ export const sheetData = {
       }
     },
     {
-      "id": "sheet-12",
-      "title": "一個春天的童話：小說亮均、亭均",
-      "author": "李敏勇",
-      "description": "一個春天的童話：小說亮均、亭均 - 文學",
-      "coverImage": "https://www.books.com.tw/img/001/104/24/0011042499.jpg",
+      "id": "sheet-34",
+      "title": "祝你快樂：魏廷朝給孩子的信",
+      "author": "陳俊愷, 陳榮聲, 王皓中, 周馥儀, 呂亭詠, 巫秀淇",
+      "description": "魏廷朝獄中家書，缺席父親的深情叮嚀，看見政治犯凡人一面。",
+      "coverImage": "https://www.books.com.tw/img/001/104/30/0011043070.jpg",
       "level": "basic",
       "tags": [
-        "文學"
+        "白恐",
+        "人物"
       ],
       "links": {
-        "books": "https://www.books.com.tw/products/0011042499?sloc=main",
-        "eslite": "https://www.eslite.com/Search?q=%E4%B8%80%E5%80%8B%E6%98%A5%E5%A4%A9%E7%9A%84%E7%AB%A5%E8%A9%B1%EF%BC%9A%E5%B0%8F%E8%AA%AA%E4%BA%AE%E5%9D%87%E3%80%81%E4%BA%AD%E5%9D%87",
-        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E4%B8%80%E5%80%8B%E6%98%A5%E5%A4%A9%E7%9A%84%E7%AB%A5%E8%A9%B1%EF%BC%9A%E5%B0%8F%E8%AA%AA%E4%BA%AE%E5%9D%87%E3%80%81%E4%BA%AD%E5%9D%87",
-        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E4%B8%80%E5%80%8B%E6%98%A5%E5%A4%A9%E7%9A%84%E7%AB%A5%E8%A9%B1%EF%BC%9A%E5%B0%8F%E8%AA%AA%E4%BA%AE%E5%9D%87%E3%80%81%E4%BA%AD%E5%9D%87"
+        "books": "https://www.books.com.tw/products/0011043070?srsltid=AfmBOorKIjL9lws8MfGYBN_jyeWf4ZeGGo3ZdF4-p8uwAMpCbb6mPLtd",
+        "eslite": "https://www.eslite.com/Search?q=%E7%A5%9D%E4%BD%A0%E5%BF%AB%E6%A8%82%EF%BC%9A%E9%AD%8F%E5%BB%B7%E6%9C%9D%E7%B5%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E4%BF%A1",
+        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E7%A5%9D%E4%BD%A0%E5%BF%AB%E6%A8%82%EF%BC%9A%E9%AD%8F%E5%BB%B7%E6%9C%9D%E7%B5%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E4%BF%A1",
+        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E7%A5%9D%E4%BD%A0%E5%BF%AB%E6%A8%82%EF%BC%9A%E9%AD%8F%E5%BB%B7%E6%9C%9D%E7%B5%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E4%BF%A1"
       }
     },
     {
       "id": "sheet-14",
       "title": "三代臺灣人：百年追求的現實與理想",
       "author": "台灣研究基金會、吳密察、許雪姬等",
-      "description": "三代臺灣人：百年追求的現實與理想 - 民主運動",
+      "description": "三代生命經驗折射百年政治變遷，呈現台灣人做主人的堅持。",
       "coverImage": "https://www.books.com.tw/img/001/077/31/0010773174.jpg",
       "level": "basic",
       "tags": [
@@ -127,7 +127,7 @@ export const sheetData = {
       "id": "sheet-18",
       "title": "台灣之春：解嚴前的台灣民主運動",
       "author": "胡慧玲",
-      "description": "台灣之春：解嚴前的台灣民主運動 - 民主運動",
+      "description": "聚焦解嚴前夕狂飆社運，描繪改革洪流如何衝垮威權體制。",
       "coverImage": "https://www.books.com.tw/img/001/086/82/0010868260.jpg",
       "level": "basic",
       "tags": [
@@ -144,7 +144,7 @@ export const sheetData = {
       "id": "sheet-19",
       "title": "台灣最好的時刻1977-1987：民族記憶美麗島",
       "author": "吳乃德",
-      "description": "台灣最好的時刻1977-1987：民族記憶美麗島 - 民主運動",
+      "description": "吳乃德致敬美麗島世代，分析那十年間展現的勇氣與人性光輝。",
       "level": "basic",
       "tags": [
         "民主運動"
@@ -157,10 +157,28 @@ export const sheetData = {
       }
     },
     {
+      "id": "sheet-20",
+      "title": "百年追求：台灣民主運動的故事",
+      "author": "陳翠蓮、吳乃德、胡慧玲",
+      "description": "權威三部曲，完整勾勒從日治到黨外，台灣人爭取民主長河。",
+      "coverImage": "https://www.books.com.tw/img/001/061/12/0010611223.jpg",
+      "level": "basic",
+      "tags": [
+        "通論",
+        "民主運動"
+      ],
+      "links": {
+        "books": "https://www.books.com.tw/products/0010611223?sloc=main",
+        "eslite": "https://www.eslite.com/Search?q=%E7%99%BE%E5%B9%B4%E8%BF%BD%E6%B1%82%EF%BC%9A%E5%8F%B0%E7%81%A3%E6%B0%91%E4%B8%BB%E9%81%8B%E5%8B%95%E7%9A%84%E6%95%85%E4%BA%8B",
+        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E7%99%BE%E5%B9%B4%E8%BF%BD%E6%B1%82%EF%BC%9A%E5%8F%B0%E7%81%A3%E6%B0%91%E4%B8%BB%E9%81%8B%E5%8B%95%E7%9A%84%E6%95%85%E4%BA%8B",
+        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E7%99%BE%E5%B9%B4%E8%BF%BD%E6%B1%82%EF%BC%9A%E5%8F%B0%E7%81%A3%E6%B0%91%E4%B8%BB%E9%81%8B%E5%8B%95%E7%9A%84%E6%95%85%E4%BA%8B"
+      }
+    },
+    {
       "id": "sheet-21",
       "title": "自治之夢：日治時期到二二八的臺灣民主運動",
       "author": "陳翠蓮",
-      "description": "自治之夢：日治時期到二二八的臺灣民主運動 - 民主運動, 日治",
+      "description": "追溯民主源頭，探討日治自治論述與二二八的延續與斷裂。",
       "coverImage": "https://www.books.com.tw/img/001/086/47/0010864745.jpg",
       "level": "basic",
       "tags": [
@@ -178,7 +196,7 @@ export const sheetData = {
       "id": "sheet-15",
       "title": "反抗的意志：1977-1979美麗島民主運動影像史",
       "author": "邱萬興",
-      "description": "反抗的意志：1977-1979美麗島民主運動影像史 - 民主運動",
+      "description": "邱萬興攝影集，視覺震撼呈現美麗島前後台灣社會力爆發。",
       "coverImage": "https://www.books.com.tw/img/001/065/74/0010657465.jpg",
       "level": "basic",
       "tags": [
@@ -195,7 +213,7 @@ export const sheetData = {
       "id": "sheet-25",
       "title": "臺灣歷史圖說",
       "author": "周婉窈",
-      "description": "臺灣歷史圖說 - 通論",
+      "description": "豐富圖片地圖搭配簡練文字，快速掌握台灣歷史空間與變遷。",
       "coverImage": "https://www.books.com.tw/img/001/002/40/0010024026.jpg",
       "level": "basic",
       "tags": [
@@ -212,7 +230,7 @@ export const sheetData = {
       "id": "sheet-30",
       "title": "回家是一趟沒有線性終點的旅程：白色恐怖與我的左派阿公",
       "author": "范容瑛",
-      "description": "回家是一趟沒有線性終點的旅程：白色恐怖與我的左派阿公 - 人物, 白恐",
+      "description": "孫女視角追尋阿公白恐經歷，探討創傷記憶傳遞與世代和解。",
       "coverImage": "https://www.books.com.tw/img/001/101/32/0011013229.jpg",
       "level": "basic",
       "tags": [
@@ -227,28 +245,10 @@ export const sheetData = {
       }
     },
     {
-      "id": "sheet-34",
-      "title": "祝你快樂：魏廷朝給孩子的信",
-      "author": "陳俊愷, 陳榮聲, 王皓中, 周馥儀, 呂亭詠, 巫秀淇",
-      "description": "祝你快樂：魏廷朝給孩子的信 - 白恐, 人物",
-      "coverImage": "https://www.books.com.tw/img/001/104/30/0011043070.jpg",
-      "level": "basic",
-      "tags": [
-        "白恐",
-        "人物"
-      ],
-      "links": {
-        "books": "https://www.books.com.tw/products/0011043070?srsltid=AfmBOorKIjL9lws8MfGYBN_jyeWf4ZeGGo3ZdF4-p8uwAMpCbb6mPLtd",
-        "eslite": "https://www.eslite.com/Search?q=%E7%A5%9D%E4%BD%A0%E5%BF%AB%E6%A8%82%EF%BC%9A%E9%AD%8F%E5%BB%B7%E6%9C%9D%E7%B5%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E4%BF%A1",
-        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E7%A5%9D%E4%BD%A0%E5%BF%AB%E6%A8%82%EF%BC%9A%E9%AD%8F%E5%BB%B7%E6%9C%9D%E7%B5%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E4%BF%A1",
-        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E7%A5%9D%E4%BD%A0%E5%BF%AB%E6%A8%82%EF%BC%9A%E9%AD%8F%E5%BB%B7%E6%9C%9D%E7%B5%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E4%BF%A1"
-      }
-    },
-    {
       "id": "sheet-27",
       "title": "他們沒在寫小說的時候：戒嚴台灣小說家群像",
       "author": "朱宥勳",
-      "description": "他們沒在寫小說的時候：戒嚴台灣小說家群像 - 文學",
+      "description": "朱宥勳評傳，揭示戒嚴作家如何透過文學偷渡思想與權力角力。",
       "coverImage": "https://www.books.com.tw/img/001/090/06/0010900615.jpg",
       "level": "intermediate",
       "tags": [
@@ -265,7 +265,7 @@ export const sheetData = {
       "id": "sheet-1",
       "title": "一甲子的未亡人：王培五與她的6個子女",
       "author": "呂培苓",
-      "description": "一甲子的未亡人：王培五與她的6個子女 - 白恐, 人物",
+      "description": "張敏之遺孀的流亡與堅毅，女性撐起家庭的偉大紀錄。",
       "coverImage": "https://www.books.com.tw/img/001/067/63/0010676365.jpg",
       "level": "intermediate",
       "tags": [
@@ -283,7 +283,7 @@ export const sheetData = {
       "id": "sheet-2",
       "title": "天猶未光：二二八事件的真相、紀念與究責",
       "author": "薛化元",
-      "description": "天猶未光：二二八事件的真相、紀念與究責 - 白恐",
+      "description": "薛化元主編，據新檔案釐清責任，轉型正義重要基石。",
       "coverImage": "https://www.books.com.tw/img/001/074/45/0010744574.jpg",
       "level": "intermediate",
       "tags": [
@@ -300,7 +300,7 @@ export const sheetData = {
       "id": "sheet-3",
       "title": "台海・冷戰・蔣介石：解密檔案中消失的台灣史1948-1988",
       "author": "林孝庭",
-      "description": "台海・冷戰・蔣介石：解密檔案中消失的台灣史1948-1988 - 通論",
+      "description": "解密檔案揭露冷戰台美博弈，打破傳統史觀的台灣縮影。",
       "coverImage": "https://www.books.com.tw/img/001/068/04/0010680467.jpg",
       "level": "intermediate",
       "tags": [
@@ -317,7 +317,7 @@ export const sheetData = {
       "id": "sheet-4",
       "title": "台灣人三部曲",
       "author": "鍾肇政",
-      "description": "台灣人三部曲 - 文學",
+      "description": "鍾肇政史詩，描繪日治三代家族興衰，尋找認同的必讀經典。",
       "level": "intermediate",
       "tags": [
         "文學"
@@ -333,7 +333,7 @@ export const sheetData = {
       "id": "sheet-5",
       "title": "此地即世界",
       "author": "StoryStudio",
-      "description": "此地即世界 - 通論",
+      "description": "拒絕孤立，從全球化脈絡看台灣歷史，具國際視野普及讀物。",
       "coverImage": "https://www.books.com.tw/img/001/102/65/0011026528.jpg",
       "level": "intermediate",
       "tags": [
@@ -350,10 +350,11 @@ export const sheetData = {
       "id": "sheet-6",
       "title": "亞細亞的孤兒",
       "author": "吳濁流",
-      "description": "亞細亞的孤兒 - 文學",
+      "description": "吳濁流經典，預言台灣人在地緣政治夾縫中被遺棄的孤獨宿命。",
       "level": "intermediate",
       "tags": [
-        "文學"
+        "文學",
+        "日治"
       ],
       "links": {
         "books": "https://search.books.com.tw/search/query/key/亞細亞的孤兒",
@@ -366,7 +367,7 @@ export const sheetData = {
       "id": "sheet-7",
       "title": "茶金歲月",
       "author": "廖運潘",
-      "description": "茶金歲月 - 文學",
+      "description": "《茶金》原型，記錄北埔姜家茶業商戰與沒落的經濟家族史。",
       "coverImage": "https://www.books.com.tw/img/001/090/76/0010907623.jpg",
       "level": "intermediate",
       "tags": [
@@ -383,7 +384,7 @@ export const sheetData = {
       "id": "sheet-8",
       "title": "透光的暗暝：臺中政治受難者暨相關人士口訪紀錄",
       "author": "許雪姬",
-      "description": "透光的暗暝：臺中政治受難者暨相關人士口訪紀錄 - 日治, 人物",
+      "description": "許雪姬主持，聚焦台中受難者口述，還原威權對地方的滲透。",
       "level": "intermediate",
       "tags": [
         "日治",
@@ -400,7 +401,7 @@ export const sheetData = {
       "id": "sheet-9",
       "title": "福爾摩沙紀事",
       "author": "馬偕",
-      "description": "福爾摩沙紀事 - 通論",
+      "description": "馬偕在台見聞，記錄19世紀台灣生態與風俗的珍貴史料。",
       "coverImage": "https://www.books.com.tw/img/001/036/60/0010366083.jpg",
       "level": "intermediate",
       "tags": [
@@ -417,7 +418,7 @@ export const sheetData = {
       "id": "sheet-10",
       "title": "轉型正義之路：島嶼的過去與未來",
       "author": "周婉窈",
-      "description": "轉型正義之路：島嶼的過去與未來 - 通論, 民主運動",
+      "description": "周婉窈為青年寫的公民課，解析各國案例與台灣民主未來。",
       "coverImage": "https://www.books.com.tw/img/001/094/40/0010944069.jpg",
       "level": "intermediate",
       "tags": [
@@ -435,7 +436,7 @@ export const sheetData = {
       "id": "sheet-11",
       "title": "讓過去成為此刻：台灣白色恐怖小說選",
       "author": "胡淑雯、童偉格",
-      "description": "讓過去成為此刻：台灣白色恐怖小說選 - 白恐",
+      "description": "精選跨世代白恐小說，展現政治暴力如何銘刻人心與肉體。",
       "coverImage": "https://www.books.com.tw/img/001/084/56/0010845692.jpg",
       "level": "intermediate",
       "tags": [
@@ -452,7 +453,7 @@ export const sheetData = {
       "id": "sheet-13",
       "title": "二二八反抗運動：台灣爭取民主之路",
       "author": "黃惠君",
-      "description": "二二八反抗運動：台灣爭取民主之路 - 白恐",
+      "description": "顛覆屠殺視角，強調台灣人的反抗與能動性，見證先輩勇氣。",
       "coverImage": "https://www.books.com.tw/img/001/091/67/0010916707.jpg",
       "level": "intermediate",
       "tags": [
@@ -469,7 +470,7 @@ export const sheetData = {
       "id": "sheet-24",
       "title": "臺灣史是什麼？",
       "author": "吳密察",
-      "description": "臺灣史是什麼？ - 通論",
+      "description": "吳密察總結史學思考，教讀者解讀史料與建構觀點的後設歷史。",
       "coverImage": "https://www.books.com.tw/img/001/101/19/0011011987.jpg",
       "level": "intermediate",
       "tags": [
@@ -486,7 +487,7 @@ export const sheetData = {
       "id": "sheet-36",
       "title": "被出賣的台灣",
       "author": "George H. Kerr",
-      "description": "被出賣的台灣 - 通論",
+      "description": "柯喬治目擊證詞，記錄戰後混亂與二二八，國際了解台灣關鍵。",
       "coverImage": "https://www.books.com.tw/img/001/000/87/0010008706.jpg",
       "level": "intermediate",
       "tags": [
@@ -503,7 +504,7 @@ export const sheetData = {
       "id": "sheet-26",
       "title": "記憶與遺忘的鬥爭：臺灣轉型正義階段報告",
       "author": "臺灣民間真相與和解促進會",
-      "description": "記憶與遺忘的鬥爭：臺灣轉型正義階段報告 - 轉型正義",
+      "description": "真促會報告，多面向檢視轉型正義困境，政策爭議重要參考。",
       "coverImage": "https://www.books.com.tw/img/001/069/20/0010692067.jpg",
       "level": "advanced",
       "tags": [
@@ -520,7 +521,7 @@ export const sheetData = {
       "id": "sheet-28",
       "title": "台灣經濟四百年",
       "author": "吳聰敏",
-      "description": "台灣經濟四百年 - 通論",
+      "description": "吳聰敏數據分析，破解迷思，剖析台灣如何走出貧困邁向富裕。",
       "coverImage": "https://www.books.com.tw/img/001/094/91/0010949161.jpg",
       "level": "advanced",
       "tags": [
@@ -537,7 +538,7 @@ export const sheetData = {
       "id": "sheet-29",
       "title": "永遠不再：臺灣威權體制下的壓迫與抵抗",
       "author": "國家人權博物館",
-      "description": "永遠不再：臺灣威權體制下的壓迫與抵抗 - 通論",
+      "description": "人權館專書，介紹威權統治法律機構與不義遺址，人權教育指南。",
       "coverImage": "https://www.books.com.tw/img/001/096/86/0010968624.jpg",
       "level": "advanced",
       "tags": [
@@ -554,7 +555,7 @@ export const sheetData = {
       "id": "sheet-31",
       "title": "帝國主義下的臺灣",
       "author": "矢內原忠雄",
-      "description": "帝國主義下的臺灣 - 通論",
+      "description": "矢內原忠雄名著，馬克思主義分析日治經濟結構的經典學術書。",
       "coverImage": "https://www.books.com.tw/img/001/093/66/0010936624.jpg",
       "level": "advanced",
       "tags": [
@@ -571,7 +572,7 @@ export const sheetData = {
       "id": "sheet-32",
       "title": "政治檔案會說話：自由時代公民指南",
       "author": "陳昱齊",
-      "description": "政治檔案會說話：自由時代公民指南 - 白恐",
+      "description": "教你讀懂監控檔案，揭露威權政府如何監控與羅織罪名。",
       "coverImage": "https://www.books.com.tw/img/001/088/97/0010889799.jpg",
       "level": "advanced",
       "tags": [
@@ -588,7 +589,7 @@ export const sheetData = {
       "id": "sheet-33",
       "title": "重構二二八：戰後美中體制、中國統治模式與臺灣",
       "author": "陳翠蓮",
-      "description": "重構二二八：戰後美中體制、中國統治模式與臺灣 - 通論, 白恐",
+      "description": "拉高到國際格局，分析美中體制與國民黨統治如何導致悲劇。",
       "coverImage": "https://www.books.com.tw/img/001/074/39/0010743933.jpg",
       "level": "advanced",
       "tags": [
@@ -606,7 +607,7 @@ export const sheetData = {
       "id": "sheet-35",
       "title": "記憶與遺忘的鬥爭：臺灣轉型正義階段報告",
       "author": "台灣民間真相與和解促進會",
-      "description": "記憶與遺忘的鬥爭：臺灣轉型正義階段報告 - 白恐",
+      "description": "解嚴二十八年後，臺灣第一份轉型正義報告書",
       "coverImage": "https://www.books.com.tw/img/001/069/20/0010692067.jpg",
       "level": "advanced",
       "tags": [
@@ -623,7 +624,7 @@ export const sheetData = {
       "id": "sheet-37",
       "title": "激越與死滅：二二八世代民主路",
       "author": "黃惠君",
-      "description": "激越與死滅：二二八世代民主路 - 通論, 民主運動, 白恐",
+      "description": "悼念二二八殞落菁英，呈現台灣人才斷層的巨大歷史傷痕。",
       "coverImage": "https://www.books.com.tw/img/001/074/33/0010743399.jpg",
       "level": "advanced",
       "tags": [
@@ -679,7 +680,7 @@ export const sheetData = {
     {
       "id": "child-sheet-3",
       "title": "說好不要哭",
-      "author": "不詳",
+      "author": "吳易蓁",
       "description": "動物寓言形式",
       "coverImage": "https://www.books.com.tw/img/001/078/70/0010787016.jpg",
       "level": "basic",
@@ -697,7 +698,7 @@ export const sheetData = {
     {
       "id": "child-sheet-4",
       "title": "愛唱歌的小熊",
-      "author": "不詳",
+      "author": "吳易蓁",
       "description": "自由表達主題",
       "coverImage": "https://www.books.com.tw/img/001/075/20/0010752035.jpg",
       "level": "basic",
@@ -715,7 +716,7 @@ export const sheetData = {
     {
       "id": "child-sheet-5",
       "title": "希望小提琴",
-      "author": "不詳",
+      "author": "幸佳慧",
       "description": "受難者生命故事",
       "coverImage": "https://www.books.com.tw/img/001/100/64/0011006427.jpg",
       "level": "basic",
@@ -787,7 +788,7 @@ export const sheetData = {
     {
       "id": "child-sheet-9",
       "title": "戴帽子的女孩",
-      "author": "不詳",
+      "author": "林滿秋 繪者陳澄波",
       "description": "威權與自由",
       "coverImage": "https://www.books.com.tw/img/001/062/47/0010624706.jpg",
       "level": "basic",
