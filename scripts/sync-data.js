@@ -58,11 +58,11 @@ async function fetchCoverFromGoogle(title, author) {
   const cleanTitle = title.replace(/[《》【】「」]/g, '').trim();
   // Take only the first author if there are multiple or if it's a category
   const cleanAuthor = author.split(',')[0].replace(/[未知作者]/g, '').trim();
-  
+
   async function search(q) {
     const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
     const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=1${apiKey ? `&key=${apiKey}` : ''}`;
-    
+
     return new Promise((resolve) => {
       https.get(url, (res) => {
         if (res.statusCode !== 200) {
@@ -104,25 +104,70 @@ async function fetchCoverFromGoogle(title, author) {
   return cover;
 }
 
-function parseCsv(csvData) {
+
+function parseAdultCsv(csvData) {
   const lines = csvData.split(/\r?\n/);
   const books = [];
 
+  // Adult Header: ,書名,分類,作者,出版年,初中高階,博客來,金石堂,誠品,是否列入
   for (let i = 1; i < lines.length; i++) {
     const line = lines[i].trim();
     if (!line) continue;
 
     const cols = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(c => c.replace(/^"|"$/g, '').trim());
-    const [source, title, author, year, booksUrl, category, type, memo] = cols;
+    // Col 0 is empty (or index)
+    const [empty, title, category, author, year, level, booksUrl, kingstoneUrl, esliteUrl, include] = cols;
 
     if (!title || title === '書名' || title.includes('新增以下書目')) continue;
+
+    // Use booksUrl from CSV (Column G)
+    const coverUrl = getCoverFromUrl(booksUrl);
 
     const book = {
       id: `sheet-${i}`,
       title: title,
       author: author || '未知作者',
-      description: memo || `${title} - ${category || ''}`,
-      coverImage: getCoverFromUrl(booksUrl) || 'https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400',
+      description: `${title} - ${category || ''}`,
+      coverImage: coverUrl || undefined, // undefined to allow fallback or placeholder in UI logic if needed, but user said "re-fix".
+      // actually, if getCoverFromUrl returns null, it means we don't have a valid product ID.
+      // User said "remove existing google book api".
+      // So if null, let it be null/undefined to hit the UI fallback (placeholder).
+      level: 'basic',
+      tags: category ? category.split(',').map(t => t.trim()) : [],
+      links: {
+        books: booksUrl || `https://search.books.com.tw/search/query/key/${encodeURIComponent(title)}`,
+        eslite: esliteUrl || getEsliteSearch(title),
+        kingstone: kingstoneUrl || getKingstoneSearch(title),
+        nlpi: getNlpiLink(title)
+      }
+    };
+    books.push(book);
+  }
+  return books;
+}
+
+function parseChildrenCsv(csvData) {
+  const lines = csvData.split(/\r?\n/);
+  const books = [];
+
+  // Children Header: 來源,書名,作者,出版年,博客來,分類,,
+  for (let i = 1; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (!line) continue;
+
+    const cols = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(c => c.replace(/^"|"$/g, '').trim());
+    const [source, title, author, year, booksUrl, category, subcat1, subcat2] = cols;
+
+    if (!title || title === '書名') continue;
+
+    const coverUrl = getCoverFromUrl(booksUrl);
+
+    const book = {
+      id: `child-sheet-${i}`,
+      title: title,
+      author: author || '不詳',
+      description: subcat2 || category || '相關繪本',
+      coverImage: coverUrl || undefined,
       level: 'basic',
       tags: category ? category.split(',').map(t => t.trim()) : [],
       links: {
@@ -160,46 +205,11 @@ async function sync() {
       fetchSheet(CHILDREN_CSV_URL)
     ]);
 
-    let books = parseCsv(adultsCsv);
-    let childrenBooks = parseCsv(childrenCsv);
+    let books = parseAdultCsv(adultsCsv);
+    let childrenBooks = parseChildrenCsv(childrenCsv);
 
-    const cache = loadCache();
-    const missingCovers = [];
-    const UNSPLASH_PLACEHOLDER = 'https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400';
-
-    async function enrichBooks(bookList, type) {
-      console.log(`Enriching ${type} covers...`);
-      for (let i = 0; i < bookList.length; i++) {
-        const book = bookList[i];
-        // Only enrich if it's using the placeholder
-        if (book.coverImage === UNSPLASH_PLACEHOLDER) {
-          const cacheKey = `${book.title}|${book.author}`;
-          if (cache[cacheKey]) {
-            book.coverImage = cache[cacheKey];
-          } else {
-            console.log(`  Fetching cover for: ${book.title}`);
-            const newCover = await fetchCoverFromGoogle(book.title, book.author);
-            if (newCover) {
-              book.coverImage = newCover;
-              cache[cacheKey] = newCover;
-            } else {
-              missingCovers.push(`${type}: ${book.title} (${book.author})`);
-            }
-            await sleep(300); // Rate limit
-          }
-        }
-      }
-    }
-
-    await enrichBooks(books, 'Adult');
-    await enrichBooks(childrenBooks, 'Children');
-
-    saveCache(cache);
-
-    if (missingCovers.length > 0) {
-      fs.writeFileSync(path.join(__dirname, 'missing_covers.log'), missingCovers.join('\n'));
-      console.log(`Log created for ${missingCovers.length} missing covers.`);
-    }
+    // Remove Google Books enrichment as per user request
+    // "remove the existing google book api static covers. let's just use the ones from books.com.tw"
 
     const output = {
       lastUpdated: new Date().toISOString(),
@@ -221,5 +231,4 @@ async function sync() {
     process.exit(1);
   }
 }
-
 sync();
