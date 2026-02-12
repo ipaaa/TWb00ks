@@ -13,6 +13,27 @@ const CHILDREN_SHEET_GID = '1880693572';
 const ADULT_CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${ADULT_SHEET_GID}`;
 const CHILDREN_CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${CHILDREN_SHEET_GID}`;
 
+const CACHE_PATH = path.join(__dirname, 'cover_cache.json');
+
+function loadCache() {
+  try {
+    if (fs.existsSync(CACHE_PATH)) {
+      return JSON.parse(fs.readFileSync(CACHE_PATH, 'utf8'));
+    }
+  } catch (err) {
+    console.error('Error loading cache:', err);
+  }
+  return {};
+}
+
+function saveCache(cache) {
+  try {
+    fs.writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
+  } catch (err) {
+    console.error('Error saving cache:', err);
+  }
+}
+
 // 輔助函式：從博客來網址提取封面圖
 function getCoverFromUrl(url) {
   if (!url || !url.includes('products/')) return null;
