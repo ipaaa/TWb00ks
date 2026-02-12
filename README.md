@@ -59,7 +59,9 @@ This is a curated website for books and documentaries related to Taiwan's democr
     - 在同一個難易度群組內，依照試算表中的「排序」欄位 (數字) 進行升冪排列。
     - 數字越小，排序越前。
 
+## 待辦事項 / Todo List
 
+- [ ] **推薦功能改版 (Revamp Recommendation):** 將「我要推薦」功能改成使用 Google Form: [Link](https://docs.google.com/forms/d/1HZPkLNFjrCWHlJ5qjLVhf6sM5AFGG5-w12R71jqt_PQ/edit)
 - [ ] **書籍封面精準度 (Book Cover Accuracy):**
     - **現狀:** 部分書籍使用 Unsplash 預設圖。 -> which is unreliable
     - **發現:** 博客來封面圖具有規律的 Sharding 邏輯：`https://www.books.com.tw/img/[ID前3碼]/[ID中3碼]/[ID 7-8碼]/[完整ID].jpg`。 the product url should be already available in the sheet, eg: https://www.books.com.tw/products/0010910448?sloc=main
