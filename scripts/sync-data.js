@@ -109,21 +109,31 @@ function parseAdultCsv(csvData) {
   const lines = csvData.split(/\r?\n/);
   const books = [];
 
-  // Adult Header: ,書名,分類,作者,出版年,初中高階,博客來,金石堂,誠品,是否列入
+  // Adult Header: 排序,書名,分類,作者,出版年,初中高階,博客來,金石堂,誠品,是否列入
   for (let i = 1; i < lines.length; i++) {
     const line = lines[i].trim();
     if (!line) continue;
 
     const cols = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(c => c.replace(/^"|"$/g, '').trim());
-    // Col 0 is empty (or index)
-    const [empty, title, category, author, year, level, booksUrl, kingstoneUrl, esliteUrl, include] = cols;
+    // Col 0 is "排序"
+    const [sortOrderStr, title, category, author, year, level, booksUrl, kingstoneUrl, esliteUrl, include] = cols;
 
     if (!title || title === '書名' || title.includes('新增以下書目')) continue;
 
     // Use booksUrl from CSV (Column G)
     const coverUrl = getCoverFromUrl(booksUrl);
 
+    // Parse sort order, default to a high number if missing to put at the end
+    const sortOrder = parseInt(sortOrderStr, 10);
+    const validSortOrder = isNaN(sortOrder) ? 999999 : sortOrder;
+
+    // Map Chinese level to English
+    let mappedLevel = 'basic';
+    if (level === '中') mappedLevel = 'intermediate';
+    else if (level === '高') mappedLevel = 'advanced';
+
     const book = {
+      _sortOrder: validSortOrder, // Temporary property for sorting
       id: `sheet-${i}`,
       title: title,
       author: author || '未知作者',
@@ -132,7 +142,7 @@ function parseAdultCsv(csvData) {
       // actually, if getCoverFromUrl returns null, it means we don't have a valid product ID.
       // User said "remove existing google book api".
       // So if null, let it be null/undefined to hit the UI fallback (placeholder).
-      level: 'basic',
+      level: mappedLevel,
       tags: category ? category.split(',').map(t => t.trim()) : [],
       links: {
         books: booksUrl || `https://search.books.com.tw/search/query/key/${encodeURIComponent(title)}`,
@@ -207,6 +217,23 @@ async function sync() {
 
     let books = parseAdultCsv(adultsCsv);
     let childrenBooks = parseChildrenCsv(childrenCsv);
+
+    // Sort books by Level (basic -> intermediate -> advanced) then by _sortOrder
+    const levelOrder = { 'basic': 1, 'intermediate': 2, 'advanced': 3 };
+
+    books.sort((a, b) => {
+      // Primary sort: Level
+      const levelA = levelOrder[a.level] || 99;
+      const levelB = levelOrder[b.level] || 99;
+      if (levelA !== levelB) {
+        return levelA - levelB;
+      }
+      // Secondary sort: Sort Order
+      return a._sortOrder - b._sortOrder;
+    });
+
+    // Remove _sortOrder property before saving
+    books = books.map(({ _sortOrder, ...book }) => book);
 
     // Remove Google Books enrichment as per user request
     // "remove the existing google book api static covers. let's just use the ones from books.com.tw"
