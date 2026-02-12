@@ -1,23 +1,6 @@
 export const sheetData = {
-  "lastUpdated": "2026-02-12T20:52:10.089Z",
+  "lastUpdated": "2026-02-12T22:38:13.139Z",
   "books": [
-    {
-      "id": "sheet-12",
-      "title": "一個春天的童話：小說亮均、亭均",
-      "author": "李敏勇",
-      "description": "一個春天的童話：小說亮均、亭均 - 文學",
-      "coverImage": "https://www.books.com.tw/img/001/104/24/0011042499.jpg",
-      "level": "basic",
-      "tags": [
-        "文學"
-      ],
-      "links": {
-        "books": "https://www.books.com.tw/products/0011042499?sloc=main",
-        "eslite": "https://www.eslite.com/Search?q=%E4%B8%80%E5%80%8B%E6%98%A5%E5%A4%A9%E7%9A%84%E7%AB%A5%E8%A9%B1%EF%BC%9A%E5%B0%8F%E8%AA%AA%E4%BA%AE%E5%9D%87%E3%80%81%E4%BA%AD%E5%9D%87",
-        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E4%B8%80%E5%80%8B%E6%98%A5%E5%A4%A9%E7%9A%84%E7%AB%A5%E8%A9%B1%EF%BC%9A%E5%B0%8F%E8%AA%AA%E4%BA%AE%E5%9D%87%E3%80%81%E4%BA%AD%E5%9D%87",
-        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E4%B8%80%E5%80%8B%E6%98%A5%E5%A4%A9%E7%9A%84%E7%AB%A5%E8%A9%B1%EF%BC%9A%E5%B0%8F%E8%AA%AA%E4%BA%AE%E5%9D%87%E3%80%81%E4%BA%AD%E5%9D%87"
-      }
-    },
     {
       "id": "sheet-16",
       "title": "少年臺灣史",
@@ -89,7 +72,7 @@ export const sheetData = {
       }
     },
     {
-      "id": "sheet-24",
+      "id": "sheet-23",
       "title": "義光教會相關人物訪談錄",
       "author": "陳儀深等",
       "description": "義光教會相關人物訪談錄 - 民主運動, 人物",
@@ -107,9 +90,26 @@ export const sheetData = {
       }
     },
     {
+      "id": "sheet-12",
+      "title": "一個春天的童話：小說亮均、亭均",
+      "author": "李敏勇",
+      "description": "一個春天的童話：小說亮均、亭均 - 文學",
+      "coverImage": "https://www.books.com.tw/img/001/104/24/0011042499.jpg",
+      "level": "basic",
+      "tags": [
+        "文學"
+      ],
+      "links": {
+        "books": "https://www.books.com.tw/products/0011042499?sloc=main",
+        "eslite": "https://www.eslite.com/Search?q=%E4%B8%80%E5%80%8B%E6%98%A5%E5%A4%A9%E7%9A%84%E7%AB%A5%E8%A9%B1%EF%BC%9A%E5%B0%8F%E8%AA%AA%E4%BA%AE%E5%9D%87%E3%80%81%E4%BA%AD%E5%9D%87",
+        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E4%B8%80%E5%80%8B%E6%98%A5%E5%A4%A9%E7%9A%84%E7%AB%A5%E8%A9%B1%EF%BC%9A%E5%B0%8F%E8%AA%AA%E4%BA%AE%E5%9D%87%E3%80%81%E4%BA%AD%E5%9D%87",
+        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E4%B8%80%E5%80%8B%E6%98%A5%E5%A4%A9%E7%9A%84%E7%AB%A5%E8%A9%B1%EF%BC%9A%E5%B0%8F%E8%AA%AA%E4%BA%AE%E5%9D%87%E3%80%81%E4%BA%AD%E5%9D%87"
+      }
+    },
+    {
       "id": "sheet-14",
       "title": "三代臺灣人：百年追求的現實與理想",
-      "author": "未知作者",
+      "author": "台灣研究基金會、吳密察、許雪姬等",
       "description": "三代臺灣人：百年追求的現實與理想 - 民主運動",
       "coverImage": "https://www.books.com.tw/img/001/077/31/0010773174.jpg",
       "level": "basic",
@@ -192,40 +192,7 @@ export const sheetData = {
       }
     },
     {
-      "id": "sheet-23",
-      "title": "愛唱歌的小熊",
-      "author": "吳易蓁",
-      "description": "愛唱歌的小熊 - 文學",
-      "level": "basic",
-      "tags": [
-        "文學"
-      ],
-      "links": {
-        "books": "https://search.books.com.tw/search/query/key/愛唱歌的小熊",
-        "eslite": "https://www.eslite.com/Search?q=%E6%84%9B%E5%94%B1%E6%AD%8C%E7%9A%84%E5%B0%8F%E7%86%8A",
-        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E6%84%9B%E5%94%B1%E6%AD%8C%E7%9A%84%E5%B0%8F%E7%86%8A",
-        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E6%84%9B%E5%94%B1%E6%AD%8C%E7%9A%84%E5%B0%8F%E7%86%8A"
-      }
-    },
-    {
       "id": "sheet-25",
-      "title": "臺灣史是什麼？",
-      "author": "吳密察",
-      "description": "臺灣史是什麼？ - 通論",
-      "coverImage": "https://www.books.com.tw/img/001/101/19/0011011987.jpg",
-      "level": "basic",
-      "tags": [
-        "通論"
-      ],
-      "links": {
-        "books": "https://www.books.com.tw/products/0011011987?sloc=main",
-        "eslite": "https://www.eslite.com/Search?q=%E8%87%BA%E7%81%A3%E5%8F%B2%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F",
-        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E8%87%BA%E7%81%A3%E5%8F%B2%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F",
-        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E8%87%BA%E7%81%A3%E5%8F%B2%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F"
-      }
-    },
-    {
-      "id": "sheet-26",
       "title": "臺灣歷史圖說",
       "author": "周婉窈",
       "description": "臺灣歷史圖說 - 通論",
@@ -239,6 +206,59 @@ export const sheetData = {
         "eslite": "https://www.eslite.com/Search?q=%E8%87%BA%E7%81%A3%E6%AD%B7%E5%8F%B2%E5%9C%96%E8%AA%AA",
         "kingstone": "https://www.kingstone.com.tw/search/search?q=%E8%87%BA%E7%81%A3%E6%AD%B7%E5%8F%B2%E5%9C%96%E8%AA%AA",
         "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E8%87%BA%E7%81%A3%E6%AD%B7%E5%8F%B2%E5%9C%96%E8%AA%AA"
+      }
+    },
+    {
+      "id": "sheet-30",
+      "title": "回家是一趟沒有線性終點的旅程：白色恐怖與我的左派阿公",
+      "author": "范容瑛",
+      "description": "回家是一趟沒有線性終點的旅程：白色恐怖與我的左派阿公 - 人物, 白恐",
+      "coverImage": "https://www.books.com.tw/img/001/101/32/0011013229.jpg",
+      "level": "basic",
+      "tags": [
+        "人物",
+        "白恐"
+      ],
+      "links": {
+        "books": "https://www.books.com.tw/products/0011013229?sloc=main",
+        "eslite": "https://www.eslite.com/Search?q=%E5%9B%9E%E5%AE%B6%E6%98%AF%E4%B8%80%E8%B6%9F%E6%B2%92%E6%9C%89%E7%B7%9A%E6%80%A7%E7%B5%82%E9%BB%9E%E7%9A%84%E6%97%85%E7%A8%8B%EF%BC%9A%E7%99%BD%E8%89%B2%E6%81%90%E6%80%96%E8%88%87%E6%88%91%E7%9A%84%E5%B7%A6%E6%B4%BE%E9%98%BF%E5%85%AC",
+        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E5%9B%9E%E5%AE%B6%E6%98%AF%E4%B8%80%E8%B6%9F%E6%B2%92%E6%9C%89%E7%B7%9A%E6%80%A7%E7%B5%82%E9%BB%9E%E7%9A%84%E6%97%85%E7%A8%8B%EF%BC%9A%E7%99%BD%E8%89%B2%E6%81%90%E6%80%96%E8%88%87%E6%88%91%E7%9A%84%E5%B7%A6%E6%B4%BE%E9%98%BF%E5%85%AC",
+        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E5%9B%9E%E5%AE%B6%E6%98%AF%E4%B8%80%E8%B6%9F%E6%B2%92%E6%9C%89%E7%B7%9A%E6%80%A7%E7%B5%82%E9%BB%9E%E7%9A%84%E6%97%85%E7%A8%8B%EF%BC%9A%E7%99%BD%E8%89%B2%E6%81%90%E6%80%96%E8%88%87%E6%88%91%E7%9A%84%E5%B7%A6%E6%B4%BE%E9%98%BF%E5%85%AC"
+      }
+    },
+    {
+      "id": "sheet-34",
+      "title": "祝你快樂：魏廷朝給孩子的信",
+      "author": "陳俊愷, 陳榮聲, 王皓中, 周馥儀, 呂亭詠, 巫秀淇",
+      "description": "祝你快樂：魏廷朝給孩子的信 - 白恐, 人物",
+      "coverImage": "https://www.books.com.tw/img/001/104/30/0011043070.jpg",
+      "level": "basic",
+      "tags": [
+        "白恐",
+        "人物"
+      ],
+      "links": {
+        "books": "https://www.books.com.tw/products/0011043070?srsltid=AfmBOorKIjL9lws8MfGYBN_jyeWf4ZeGGo3ZdF4-p8uwAMpCbb6mPLtd",
+        "eslite": "https://www.eslite.com/Search?q=%E7%A5%9D%E4%BD%A0%E5%BF%AB%E6%A8%82%EF%BC%9A%E9%AD%8F%E5%BB%B7%E6%9C%9D%E7%B5%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E4%BF%A1",
+        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E7%A5%9D%E4%BD%A0%E5%BF%AB%E6%A8%82%EF%BC%9A%E9%AD%8F%E5%BB%B7%E6%9C%9D%E7%B5%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E4%BF%A1",
+        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E7%A5%9D%E4%BD%A0%E5%BF%AB%E6%A8%82%EF%BC%9A%E9%AD%8F%E5%BB%B7%E6%9C%9D%E7%B5%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E4%BF%A1"
+      }
+    },
+    {
+      "id": "sheet-27",
+      "title": "他們沒在寫小說的時候：戒嚴台灣小說家群像",
+      "author": "朱宥勳",
+      "description": "他們沒在寫小說的時候：戒嚴台灣小說家群像 - 文學",
+      "coverImage": "https://www.books.com.tw/img/001/090/06/0010900615.jpg",
+      "level": "intermediate",
+      "tags": [
+        "文學"
+      ],
+      "links": {
+        "books": "https://www.books.com.tw/products/0010900615?sloc=main",
+        "eslite": "https://www.eslite.com/Search?q=%E4%BB%96%E5%80%91%E6%B2%92%E5%9C%A8%E5%AF%AB%E5%B0%8F%E8%AA%AA%E7%9A%84%E6%99%82%E5%80%99%EF%BC%9A%E6%88%92%E5%9A%B4%E5%8F%B0%E7%81%A3%E5%B0%8F%E8%AA%AA%E5%AE%B6%E7%BE%A4%E5%83%8F",
+        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E4%BB%96%E5%80%91%E6%B2%92%E5%9C%A8%E5%AF%AB%E5%B0%8F%E8%AA%AA%E7%9A%84%E6%99%82%E5%80%99%EF%BC%9A%E6%88%92%E5%9A%B4%E5%8F%B0%E7%81%A3%E5%B0%8F%E8%AA%AA%E5%AE%B6%E7%BE%A4%E5%83%8F",
+        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E4%BB%96%E5%80%91%E6%B2%92%E5%9C%A8%E5%AF%AB%E5%B0%8F%E8%AA%AA%E7%9A%84%E6%99%82%E5%80%99%EF%BC%9A%E6%88%92%E5%9A%B4%E5%8F%B0%E7%81%A3%E5%B0%8F%E8%AA%AA%E5%AE%B6%E7%BE%A4%E5%83%8F"
       }
     },
     {
@@ -446,27 +466,44 @@ export const sheetData = {
       }
     },
     {
-      "id": "sheet-28",
-      "title": "他們沒在寫小說的時候：戒嚴台灣小說家群像",
-      "author": "朱宥勳",
-      "description": "他們沒在寫小說的時候：戒嚴台灣小說家群像 - 文學",
-      "coverImage": "https://www.books.com.tw/img/001/090/06/0010900615.jpg",
-      "level": "advanced",
+      "id": "sheet-24",
+      "title": "臺灣史是什麼？",
+      "author": "吳密察",
+      "description": "臺灣史是什麼？ - 通論",
+      "coverImage": "https://www.books.com.tw/img/001/101/19/0011011987.jpg",
+      "level": "intermediate",
       "tags": [
-        "文學"
+        "通論"
       ],
       "links": {
-        "books": "https://www.books.com.tw/products/0010900615?sloc=main",
-        "eslite": "https://www.eslite.com/Search?q=%E4%BB%96%E5%80%91%E6%B2%92%E5%9C%A8%E5%AF%AB%E5%B0%8F%E8%AA%AA%E7%9A%84%E6%99%82%E5%80%99%EF%BC%9A%E6%88%92%E5%9A%B4%E5%8F%B0%E7%81%A3%E5%B0%8F%E8%AA%AA%E5%AE%B6%E7%BE%A4%E5%83%8F",
-        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E4%BB%96%E5%80%91%E6%B2%92%E5%9C%A8%E5%AF%AB%E5%B0%8F%E8%AA%AA%E7%9A%84%E6%99%82%E5%80%99%EF%BC%9A%E6%88%92%E5%9A%B4%E5%8F%B0%E7%81%A3%E5%B0%8F%E8%AA%AA%E5%AE%B6%E7%BE%A4%E5%83%8F",
-        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E4%BB%96%E5%80%91%E6%B2%92%E5%9C%A8%E5%AF%AB%E5%B0%8F%E8%AA%AA%E7%9A%84%E6%99%82%E5%80%99%EF%BC%9A%E6%88%92%E5%9A%B4%E5%8F%B0%E7%81%A3%E5%B0%8F%E8%AA%AA%E5%AE%B6%E7%BE%A4%E5%83%8F"
+        "books": "https://www.books.com.tw/products/0011011987?sloc=main",
+        "eslite": "https://www.eslite.com/Search?q=%E8%87%BA%E7%81%A3%E5%8F%B2%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F",
+        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E8%87%BA%E7%81%A3%E5%8F%B2%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F",
+        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E8%87%BA%E7%81%A3%E5%8F%B2%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F"
       }
     },
     {
-      "id": "sheet-27",
-      "title": "《記憶與遺忘的鬥爭：臺灣轉型正義階段報告》",
-      "author": "未知作者",
-      "description": "《記憶與遺忘的鬥爭：臺灣轉型正義階段報告》 - 轉型正義",
+      "id": "sheet-36",
+      "title": "被出賣的台灣",
+      "author": "George H. Kerr",
+      "description": "被出賣的台灣 - 通論",
+      "coverImage": "https://www.books.com.tw/img/001/000/87/0010008706.jpg",
+      "level": "intermediate",
+      "tags": [
+        "通論"
+      ],
+      "links": {
+        "books": "https://www.books.com.tw/products/0010008706?sloc=main",
+        "eslite": "https://www.eslite.com/Search?q=%E8%A2%AB%E5%87%BA%E8%B3%A3%E7%9A%84%E5%8F%B0%E7%81%A3",
+        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E8%A2%AB%E5%87%BA%E8%B3%A3%E7%9A%84%E5%8F%B0%E7%81%A3",
+        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E8%A2%AB%E5%87%BA%E8%B3%A3%E7%9A%84%E5%8F%B0%E7%81%A3"
+      }
+    },
+    {
+      "id": "sheet-26",
+      "title": "記憶與遺忘的鬥爭：臺灣轉型正義階段報告",
+      "author": "臺灣民間真相與和解促進會",
+      "description": "記憶與遺忘的鬥爭：臺灣轉型正義階段報告 - 轉型正義",
       "coverImage": "https://www.books.com.tw/img/001/069/20/0010692067.jpg",
       "level": "advanced",
       "tags": [
@@ -474,13 +511,13 @@ export const sheetData = {
       ],
       "links": {
         "books": "https://www.books.com.tw/products/0010692067?srsltid=AfmBOooBQ0iDKZu5EKPWYtaPlb3VE6AHOTQD9ANkCXwCTgAwuDhP3k7A",
-        "eslite": "https://www.eslite.com/Search?q=%E3%80%8A%E8%A8%98%E6%86%B6%E8%88%87%E9%81%BA%E5%BF%98%E7%9A%84%E9%AC%A5%E7%88%AD%EF%BC%9A%E8%87%BA%E7%81%A3%E8%BD%89%E5%9E%8B%E6%AD%A3%E7%BE%A9%E9%9A%8E%E6%AE%B5%E5%A0%B1%E5%91%8A%E3%80%8B",
-        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E3%80%8A%E8%A8%98%E6%86%B6%E8%88%87%E9%81%BA%E5%BF%98%E7%9A%84%E9%AC%A5%E7%88%AD%EF%BC%9A%E8%87%BA%E7%81%A3%E8%BD%89%E5%9E%8B%E6%AD%A3%E7%BE%A9%E9%9A%8E%E6%AE%B5%E5%A0%B1%E5%91%8A%E3%80%8B",
-        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E3%80%8A%E8%A8%98%E6%86%B6%E8%88%87%E9%81%BA%E5%BF%98%E7%9A%84%E9%AC%A5%E7%88%AD%EF%BC%9A%E8%87%BA%E7%81%A3%E8%BD%89%E5%9E%8B%E6%AD%A3%E7%BE%A9%E9%9A%8E%E6%AE%B5%E5%A0%B1%E5%91%8A%E3%80%8B"
+        "eslite": "https://www.eslite.com/Search?q=%E8%A8%98%E6%86%B6%E8%88%87%E9%81%BA%E5%BF%98%E7%9A%84%E9%AC%A5%E7%88%AD%EF%BC%9A%E8%87%BA%E7%81%A3%E8%BD%89%E5%9E%8B%E6%AD%A3%E7%BE%A9%E9%9A%8E%E6%AE%B5%E5%A0%B1%E5%91%8A",
+        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E8%A8%98%E6%86%B6%E8%88%87%E9%81%BA%E5%BF%98%E7%9A%84%E9%AC%A5%E7%88%AD%EF%BC%9A%E8%87%BA%E7%81%A3%E8%BD%89%E5%9E%8B%E6%AD%A3%E7%BE%A9%E9%9A%8E%E6%AE%B5%E5%A0%B1%E5%91%8A",
+        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E8%A8%98%E6%86%B6%E8%88%87%E9%81%BA%E5%BF%98%E7%9A%84%E9%AC%A5%E7%88%AD%EF%BC%9A%E8%87%BA%E7%81%A3%E8%BD%89%E5%9E%8B%E6%AD%A3%E7%BE%A9%E9%9A%8E%E6%AE%B5%E5%A0%B1%E5%91%8A"
       }
     },
     {
-      "id": "sheet-29",
+      "id": "sheet-28",
       "title": "台灣經濟四百年",
       "author": "吳聰敏",
       "description": "台灣經濟四百年 - 通論",
@@ -497,7 +534,7 @@ export const sheetData = {
       }
     },
     {
-      "id": "sheet-30",
+      "id": "sheet-29",
       "title": "永遠不再：臺灣威權體制下的壓迫與抵抗",
       "author": "國家人權博物館",
       "description": "永遠不再：臺灣威權體制下的壓迫與抵抗 - 通論",
@@ -515,24 +552,6 @@ export const sheetData = {
     },
     {
       "id": "sheet-31",
-      "title": "回家是一趟沒有線性終點的旅程：白色恐怖與我的左派阿公",
-      "author": "范容瑛",
-      "description": "回家是一趟沒有線性終點的旅程：白色恐怖與我的左派阿公 - 人物, 白恐",
-      "coverImage": "https://www.books.com.tw/img/001/101/32/0011013229.jpg",
-      "level": "advanced",
-      "tags": [
-        "人物",
-        "白恐"
-      ],
-      "links": {
-        "books": "https://www.books.com.tw/products/0011013229?sloc=main",
-        "eslite": "https://www.eslite.com/Search?q=%E5%9B%9E%E5%AE%B6%E6%98%AF%E4%B8%80%E8%B6%9F%E6%B2%92%E6%9C%89%E7%B7%9A%E6%80%A7%E7%B5%82%E9%BB%9E%E7%9A%84%E6%97%85%E7%A8%8B%EF%BC%9A%E7%99%BD%E8%89%B2%E6%81%90%E6%80%96%E8%88%87%E6%88%91%E7%9A%84%E5%B7%A6%E6%B4%BE%E9%98%BF%E5%85%AC",
-        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E5%9B%9E%E5%AE%B6%E6%98%AF%E4%B8%80%E8%B6%9F%E6%B2%92%E6%9C%89%E7%B7%9A%E6%80%A7%E7%B5%82%E9%BB%9E%E7%9A%84%E6%97%85%E7%A8%8B%EF%BC%9A%E7%99%BD%E8%89%B2%E6%81%90%E6%80%96%E8%88%87%E6%88%91%E7%9A%84%E5%B7%A6%E6%B4%BE%E9%98%BF%E5%85%AC",
-        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E5%9B%9E%E5%AE%B6%E6%98%AF%E4%B8%80%E8%B6%9F%E6%B2%92%E6%9C%89%E7%B7%9A%E6%80%A7%E7%B5%82%E9%BB%9E%E7%9A%84%E6%97%85%E7%A8%8B%EF%BC%9A%E7%99%BD%E8%89%B2%E6%81%90%E6%80%96%E8%88%87%E6%88%91%E7%9A%84%E5%B7%A6%E6%B4%BE%E9%98%BF%E5%85%AC"
-      }
-    },
-    {
-      "id": "sheet-32",
       "title": "帝國主義下的臺灣",
       "author": "矢內原忠雄",
       "description": "帝國主義下的臺灣 - 通論",
@@ -549,7 +568,7 @@ export const sheetData = {
       }
     },
     {
-      "id": "sheet-33",
+      "id": "sheet-32",
       "title": "政治檔案會說話：自由時代公民指南",
       "author": "陳昱齊",
       "description": "政治檔案會說話：自由時代公民指南 - 白恐",
@@ -566,7 +585,7 @@ export const sheetData = {
       }
     },
     {
-      "id": "sheet-34",
+      "id": "sheet-33",
       "title": "重構二二八：戰後美中體制、中國統治模式與臺灣",
       "author": "陳翠蓮",
       "description": "重構二二八：戰後美中體制、中國統治模式與臺灣 - 通論, 白恐",
@@ -585,23 +604,6 @@ export const sheetData = {
     },
     {
       "id": "sheet-35",
-      "title": "祝你快樂：魏廷朝給孩子的信",
-      "author": "未知作者",
-      "description": "祝你快樂：魏廷朝給孩子的信 - 白恐, 人物",
-      "level": "advanced",
-      "tags": [
-        "白恐",
-        "人物"
-      ],
-      "links": {
-        "books": "https://search.books.com.tw/search/query/key/%E7%A5%9D%E4%BD%A0%E5%BF%AB%E6%A8%82%EF%BC%9A%E9%AD%8F%E5%BB%B7%E6%9C%9D%E7%B5%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E4%BF%A1",
-        "eslite": "https://www.eslite.com/Search?q=%E7%A5%9D%E4%BD%A0%E5%BF%AB%E6%A8%82%EF%BC%9A%E9%AD%8F%E5%BB%B7%E6%9C%9D%E7%B5%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E4%BF%A1",
-        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E7%A5%9D%E4%BD%A0%E5%BF%AB%E6%A8%82%EF%BC%9A%E9%AD%8F%E5%BB%B7%E6%9C%9D%E7%B5%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E4%BF%A1",
-        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E7%A5%9D%E4%BD%A0%E5%BF%AB%E6%A8%82%EF%BC%9A%E9%AD%8F%E5%BB%B7%E6%9C%9D%E7%B5%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E4%BF%A1"
-      }
-    },
-    {
-      "id": "sheet-36",
       "title": "記憶與遺忘的鬥爭：臺灣轉型正義階段報告",
       "author": "台灣民間真相與和解促進會",
       "description": "記憶與遺忘的鬥爭：臺灣轉型正義階段報告 - 白恐",
@@ -619,23 +621,6 @@ export const sheetData = {
     },
     {
       "id": "sheet-37",
-      "title": "被出賣的台灣",
-      "author": "George H. Kerr",
-      "description": "被出賣的台灣 - 通論",
-      "coverImage": "https://www.books.com.tw/img/001/000/87/0010008706.jpg",
-      "level": "advanced",
-      "tags": [
-        "通論"
-      ],
-      "links": {
-        "books": "https://www.books.com.tw/products/0010008706?sloc=main",
-        "eslite": "https://www.eslite.com/Search?q=%E8%A2%AB%E5%87%BA%E8%B3%A3%E7%9A%84%E5%8F%B0%E7%81%A3",
-        "kingstone": "https://www.kingstone.com.tw/search/search?q=%E8%A2%AB%E5%87%BA%E8%B3%A3%E7%9A%84%E5%8F%B0%E7%81%A3",
-        "nlpi": "https://ebook.nlpi.edu.tw/search?search_field=TI&search_input=%E8%A2%AB%E5%87%BA%E8%B3%A3%E7%9A%84%E5%8F%B0%E7%81%A3"
-      }
-    },
-    {
-      "id": "sheet-38",
       "title": "激越與死滅：二二八世代民主路",
       "author": "黃惠君",
       "description": "激越與死滅：二二八世代民主路 - 通論, 民主運動, 白恐",
