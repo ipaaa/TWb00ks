@@ -5,7 +5,7 @@ import Layout from './components/Layout';
 import BookCard from './components/BookCard';
 import DocCard from './components/DocCard';
 import { BOOKS, CHILDREN_BOOKS, DOCUMENTARIES } from './constants';
-import { BookMarked, GraduationCap, Compass, Palette, Star, Pencil, Quote, X, Hash, Search } from 'lucide-react';
+import { BookMarked, GraduationCap, Compass, Palette, Star, Pencil, Quote, X, Hash, Search, ExternalLink } from 'lucide-react';
 import { Book, ReadingLevel } from './types';
 
 const BooksView: React.FC = () => {
@@ -275,133 +275,32 @@ const DocumentariesView: React.FC = () => (
 );
 
 const ShareView: React.FC = () => {
-  const [communityBooks, setCommunityBooks] = useState<Book[]>([]);
-  const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({
-    title: '', author: '', level: 'basic' as ReadingLevel, booksLink: '', esliteLink: '', kingstoneLink: '', reason: '', contributor: ''
-  });
-
-  useEffect(() => {
-    const saved = localStorage.getItem('democracy_community_books');
-    if (saved) setCommunityBooks(JSON.parse(saved));
-  }, []);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.title) return;
-    const newBook: Book = {
-      id: Date.now().toString(),
-      title: formData.title,
-      author: formData.author,
-      level: formData.level,
-      description: formData.reason,
-      links: { books: formData.booksLink, eslite: formData.esliteLink, kingstone: formData.kingstoneLink },
-      contributor: formData.contributor || '匿名讀者',
-      tags: ['網友推薦']
-    };
-    const updated = [newBook, ...communityBooks];
-    setCommunityBooks(updated);
-    localStorage.setItem('democracy_community_books', JSON.stringify(updated));
-    setShowForm(false);
-    setFormData({ title: '', author: '', level: 'basic', booksLink: '', esliteLink: '', kingstoneLink: '', reason: '', contributor: '' });
-  };
-
-  const getLevelBadge = (level: ReadingLevel) => {
-    switch (level) {
-      case 'basic': return <span className="px-2 py-0.5 bg-rose-100 text-rose-700 text-[10px] font-bold rounded">初階</span>;
-      case 'intermediate': return <span className="px-2 py-0.5 bg-amber-100 text-amber-700 text-[10px] font-bold rounded">中階</span>;
-      case 'advanced': return <span className="px-2 py-0.5 bg-red-100 text-red-700 text-[10px] font-bold rounded">進階</span>;
-    }
-  };
-
   return (
-    <section className="animate-in fade-in duration-700 space-y-12 pb-20">
-      <div className="text-center max-w-3xl mx-auto">
-        <div className="inline-flex p-4 bg-rose-50 text-rose-700 rounded-2xl mb-6">
-          <Pencil size={32} strokeWidth={2} />
-        </div>
-        <h2 className="text-3xl sm:text-4xl font-black text-stone-900 serif mb-4">我要推薦：民主共編 Spreadsheet</h2>
-        <p className="text-stone-600 mb-6">歡迎分享您心目中的補課好書，讓這份清單更完整。</p>
-        <button onClick={() => setShowForm(true)} className="bg-rose-700 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-rose-800 transition-all">新增推薦</button>
+    <section className="animate-in fade-in duration-700 min-h-[60vh] flex flex-col items-center justify-center text-center px-4">
+      <div className="mb-8 p-6 bg-rose-50 text-rose-700 rounded-full inline-block">
+        <Pencil size={48} strokeWidth={2} />
       </div>
+      <h2 className="text-3xl sm:text-4xl font-black text-stone-900 serif mb-6">
+        我要推薦：民主共編
+      </h2>
+      <p className="text-stone-600 text-lg mb-8 max-w-2xl leading-relaxed">
+        我們相信，每個人都能成為民主記憶的守護者。<br />
+        歡迎透過下方表單分享您心目中的補課好書，我們將會定期整理並更新至這份書單中。
+      </p>
 
-      {showForm && (
-        <div className="bg-white p-8 rounded-2xl shadow-xl border border-stone-200 max-w-2xl mx-auto animate-in zoom-in duration-300">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input
-                placeholder="書名 (必填)"
-                className="p-3 border rounded-xl bg-stone-50 focus:ring-2 focus:ring-rose-500 outline-none"
-                value={formData.title}
-                onChange={e => setFormData({ ...formData, title: e.target.value })}
-                required
-              />
-              <input
-                placeholder="作者"
-                className="p-3 border rounded-xl bg-stone-50 focus:ring-2 focus:ring-rose-500 outline-none"
-                value={formData.author}
-                onChange={e => setFormData({ ...formData, author: e.target.value })}
-              />
-            </div>
-            <select
-              className="w-full p-3 border rounded-xl bg-stone-50 focus:ring-2 focus:ring-rose-500 outline-none"
-              value={formData.level}
-              onChange={e => setFormData({ ...formData, level: e.target.value as ReadingLevel })}
-            >
-              <option value="basic">初階：歷史小白友善</option>
-              <option value="intermediate">中階：看懂社會形狀</option>
-              <option value="advanced">進階：直視歷史痛點</option>
-            </select>
-            <textarea
-              placeholder="推薦理由 (簡短描述)"
-              className="w-full p-3 border rounded-xl bg-stone-50 h-24 focus:ring-2 focus:ring-rose-500 outline-none"
-              value={formData.reason}
-              onChange={e => setFormData({ ...formData, reason: e.target.value })}
-            ></textarea>
-            <input
-              placeholder="您的稱呼"
-              className="w-full p-3 border rounded-xl bg-stone-50 focus:ring-2 focus:ring-rose-500 outline-none"
-              value={formData.contributor}
-              onChange={e => setFormData({ ...formData, contributor: e.target.value })}
-            />
-            <div className="flex gap-2">
-              <button type="submit" className="flex-grow bg-rose-700 text-white p-3 rounded-xl font-bold hover:bg-rose-800 transition-colors">送出推薦</button>
-              <button type="button" onClick={() => setShowForm(false)} className="px-6 bg-stone-200 text-stone-600 rounded-xl font-bold hover:bg-stone-300 transition-colors">取消</button>
-            </div>
-          </form>
-        </div>
-      )}
+      <a
+        href="https://docs.google.com/forms/d/1HZPkLNFjrCWHlJ5qjLVhf6sM5AFGG5-w12R71jqt_PQ/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-rose-700 font-lg rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-600 hover:bg-rose-800 hover:scale-105 shadow-xl"
+      >
+        <span>前往填寫推薦表單</span>
+        <ExternalLink size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+      </a>
 
-      <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-stone-200">
-        <div className="overflow-x-auto">
-          <table className="w-full text-left">
-            <thead className="bg-stone-50 border-b border-stone-200">
-              <tr className="text-xs font-bold uppercase text-stone-500">
-                <th className="p-4">書名</th>
-                <th className="p-4">級別</th>
-                <th className="p-4">推薦理由</th>
-                <th className="p-4">推薦者</th>
-              </tr>
-            </thead>
-            <tbody>
-              {communityBooks.length === 0 ? (
-                <tr>
-                  <td colSpan={4} className="p-12 text-center text-stone-400 serif">尚未有網友推薦，來當第一個吧！</td>
-                </tr>
-              ) : (
-                communityBooks.map(b => (
-                  <tr key={b.id} className="border-b border-stone-100 hover:bg-stone-50 transition-colors">
-                    <td className="p-4 font-bold text-stone-900">{b.title}</td>
-                    <td className="p-4">{getLevelBadge(b.level)}</td>
-                    <td className="p-4 text-xs text-stone-600 leading-relaxed max-w-xs">{b.description}</td>
-                    <td className="p-4 text-sm text-stone-500">{b.contributor}</td>
-                  </tr>
-                ))
-              )}
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <p className="mt-8 text-stone-400 text-sm">
+        * 點擊按鈕將開啟 Google Form 頁面
+      </p>
     </section>
   );
 };
