@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Book } from '../types';
-import { Library, ExternalLink, Hash } from 'lucide-react';
+import { Library, ExternalLink, Hash, ShoppingCart } from 'lucide-react';
 
 interface BookCardProps {
   book: Book;
@@ -50,43 +50,23 @@ const BookCard: React.FC<BookCardProps> = ({ book, onTagClick }) => {
           {book.description}
         </p>
         
-        <div className="pt-2.5 border-t border-stone-100 space-y-2.5">
-          <div>
-            <div className="grid grid-cols-3 gap-1 mb-2">
-              <a
-                href={book.links.books}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="博客來"
-                className="py-1 bg-stone-50 hover:bg-rose-50 text-stone-700 hover:text-rose-700 text-[9px] font-bold rounded text-center transition-colors border border-stone-100"
-              >
-                博客來
-              </a>
-              <a
-                href={book.links.eslite}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="誠品"
-                className="py-1 bg-stone-50 hover:bg-rose-50 text-stone-700 hover:text-rose-700 text-[9px] font-bold rounded text-center transition-colors border border-stone-100"
-              >
-                誠品
-              </a>
-              <a
-                href={book.links.kingstone}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="金石堂"
-                className="py-1 bg-stone-50 hover:bg-rose-50 text-stone-700 hover:text-rose-700 text-[9px] font-bold rounded text-center transition-colors border border-stone-100"
-              >
-                金石堂
-              </a>
-            </div>
+        <div className="pt-2.5 border-t border-stone-100">
+          <div className="grid grid-cols-2 gap-2">
+            <a
+              href={book.links.books}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex py-1.5 bg-stone-900 hover:bg-rose-800 text-white text-[9px] font-bold rounded items-center justify-center space-x-1 transition-colors shadow-sm"
+            >
+              <ShoppingCart size={10} />
+              <span>網路購書</span>
+            </a>
             
             <a
               href={book.links.nlpi}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full py-1.5 bg-stone-100 hover:bg-stone-200 text-stone-800 text-[9px] font-bold rounded items-center justify-center space-x-1 transition-colors border border-stone-200"
+              className="flex py-1.5 bg-stone-100 hover:bg-stone-200 text-stone-800 text-[9px] font-bold rounded items-center justify-center space-x-1 transition-colors border border-stone-200"
             >
               <Library size={10} />
               <span>國資圖借閱</span>
