@@ -52,13 +52,10 @@ const BooksView: React.FC = () => {
             </h2>
             <div className="space-y-4 text-stone-700 leading-relaxed serif text-lg">
               <p>
-                在這裡，我們將自由視為一份珍貴的家業。身處於權利與選擇都相對充裕的時代，我們就像是承接了一份豐厚遺產的「民主富二代」。
-              </p>
-              <p>
-                這份遺產並非憑空而降，而是由無數前輩在歷史的轉角處，憑藉韌性與對理想的堅持，一棒接一棒傳遞至今。
+                在這裡，我們將自由視為一份珍貴的家業。這份遺產並非憑空而降，而是由無數前輩在歷史的轉角處，憑藉韌性與對理想的堅持，一棒接一棒傳遞至今。
               </p>
               <p className="font-bold text-stone-900">
-                本站的成立，是為了讓我們不同世代能共同認識這份遺產的來歷。像在時光岩壁徒手攀登，我們在史料間尋找支點，憑藉著對真相的渴望，換取一份俯瞰當代社會的清澈視野。
+                本站的成立，是為了讓我們不同世代能共同認識這份遺產的來歷。像在時光岩壁徒手攀登，在史料間尋找支點，憑藉著對真相的渴望，換取一份俯瞰當代社會的清澈視野。
               </p>
             </div>
           </div>
@@ -92,24 +89,18 @@ const BooksView: React.FC = () => {
           )}
         </div>
 
-        {!filterTag && !searchQuery ? (
-          <p className="text-stone-600 text-base leading-relaxed italic">
-            「歷史是一場記憶與遺忘的鬥爭。」—— 米蘭・昆德拉
-          </p>
-        ) : (
-          (filterTag || searchQuery) && (
-            <div className="flex items-center justify-center mt-4 gap-2">
-              {filterTag && (
-                <button
-                  onClick={() => setFilterTag(null)}
-                  className="flex items-center gap-2 px-4 py-2 bg-rose-100 text-rose-700 rounded-full text-sm font-bold hover:bg-rose-200 transition-colors"
-                >
-                  <X size={16} />
-                  清除標籤: #{filterTag}
-                </button>
-              )}
-            </div>
-          )
+        {(filterTag || searchQuery) && (
+          <div className="flex items-center justify-center mt-4 gap-2">
+            {filterTag && (
+              <button
+                onClick={() => setFilterTag(null)}
+                className="flex items-center gap-2 px-4 py-2 bg-rose-100 text-rose-700 rounded-full text-sm font-bold hover:bg-rose-200 transition-colors"
+              >
+                <X size={16} />
+                清除標籤: #{filterTag}
+              </button>
+            )}
+          </div>
         )}
       </div>
 
