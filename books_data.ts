@@ -1,5 +1,5 @@
 export const sheetData = {
-  "lastUpdated": "2026-02-12T05:34:01.712Z",
+  "lastUpdated": "2026-02-12T05:54:46.435Z",
   "books": [
     {
       "id": "sheet-1",
@@ -57,7 +57,7 @@ export const sheetData = {
       "title": "二二八反抗運動：台灣爭取民主之路",
       "author": "白恐",
       "description": "二二八反抗運動：台灣爭取民主之路 - 初",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=rrVsEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "level": "basic",
       "tags": [
         "初"
@@ -91,7 +91,7 @@ export const sheetData = {
       "title": "反抗的意志：1977-1979美麗島民主運動影像史",
       "author": "民主運動",
       "description": "反抗的意志：1977-1979美麗島民主運動影像史 - 初",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=StsQBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "level": "basic",
       "tags": [
         "初"
@@ -125,7 +125,7 @@ export const sheetData = {
       "title": "少年臺灣史",
       "author": "通論",
       "description": "少年臺灣史 - 初",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=Fw0SEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "level": "basic",
       "tags": [
         "初"
@@ -142,7 +142,7 @@ export const sheetData = {
       "title": "他們沒在寫小說的時候：戒嚴台灣小說家群像",
       "author": "文學",
       "description": "他們沒在寫小說的時候：戒嚴台灣小說家群像 - 高",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=jHTSEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "level": "basic",
       "tags": [
         "高"
@@ -193,7 +193,7 @@ export const sheetData = {
       "title": "台灣人四百年史",
       "author": "通論",
       "description": "台灣人四百年史 - 初",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=yBn3DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "level": "basic",
       "tags": [
         "初"
@@ -210,7 +210,7 @@ export const sheetData = {
       "title": "台灣之春：解嚴前的台灣民主運動",
       "author": "民主運動",
       "description": "台灣之春：解嚴前的台灣民主運動 - 初",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=Di5WAAAAYAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "level": "basic",
       "tags": [
         "初"
@@ -227,7 +227,7 @@ export const sheetData = {
       "title": "台灣最好的時刻1977-1987：民族記憶美麗島",
       "author": "民主運動",
       "description": "台灣最好的時刻1977-1987：民族記憶美麗島 - 初",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=StsQBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "level": "basic",
       "tags": [
         "初"
@@ -244,7 +244,7 @@ export const sheetData = {
       "title": "台灣經濟四百年",
       "author": "通論",
       "description": "台灣經濟四百年 - 高",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=PJ3tEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "level": "basic",
       "tags": [
         "高"
@@ -278,7 +278,7 @@ export const sheetData = {
       "title": "回家是一趟沒有線性終點的旅程：白色恐怖與我的左派阿公",
       "author": "人物, 白恐",
       "description": "回家是一趟沒有線性終點的旅程：白色恐怖與我的左派阿公 - 高",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=gLNKEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "level": "basic",
       "tags": [
         "高"
@@ -295,7 +295,7 @@ export const sheetData = {
       "title": "此地即世界",
       "author": "通論",
       "description": "此地即世界 - 中",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=uW1zEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "level": "basic",
       "tags": [
         "中"
@@ -329,7 +329,7 @@ export const sheetData = {
       "title": "自治之夢：日治時期到二二八的臺灣民主運動",
       "author": "民主運動, 日治",
       "description": "自治之夢：日治時期到二二八的臺灣民主運動 - 初",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=-p3tEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "level": "basic",
       "tags": [
         "初"
@@ -346,7 +346,7 @@ export const sheetData = {
       "title": "亞細亞的孤兒",
       "author": "文學",
       "description": "亞細亞的孤兒 - 中",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=cB5LAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "level": "basic",
       "tags": [
         "中"
@@ -363,7 +363,7 @@ export const sheetData = {
       "title": "帝國主義下的臺灣",
       "author": "通論",
       "description": "帝國主義下的臺灣 - 高",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=1GiSEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "level": "basic",
       "tags": [
         "高"
@@ -431,7 +431,7 @@ export const sheetData = {
       "title": "茶金歲月",
       "author": "文學",
       "description": "茶金歲月 - 中",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=Re0qEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "level": "basic",
       "tags": [
         "中"
@@ -465,7 +465,7 @@ export const sheetData = {
       "title": "被出賣的台灣",
       "author": "通論",
       "description": "被出賣的台灣 - 高",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=4B82AQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "level": "basic",
       "tags": [
         "高"
@@ -567,7 +567,7 @@ export const sheetData = {
       "title": "臺灣史是什麼？",
       "author": "通論",
       "description": "臺灣史是什麼？ - 初",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=WsVDEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "level": "basic",
       "tags": [
         "初"
@@ -635,7 +635,7 @@ export const sheetData = {
       "title": "讓過去成為此刻：台灣白色恐怖小說選",
       "author": "白恐",
       "description": "讓過去成為此刻：台灣白色恐怖小說選 - 中",
-      "coverImage": "https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400",
+      "coverImage": "http://books.google.com/books/content?id=1J3tEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "level": "basic",
       "tags": [
         "中"

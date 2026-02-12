@@ -18,6 +18,8 @@ jobs:
         run: npm install
       - name: Run sync script
         run: node scripts/sync-data.js
+        env:
+          GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_API_KEY }}
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

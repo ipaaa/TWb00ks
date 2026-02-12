@@ -56,31 +56,52 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 async function fetchCoverFromGoogle(title, author) {
   // Clean title: remove 《 》 and other common punctuation
   const cleanTitle = title.replace(/[《》【】「」]/g, '').trim();
-  const cleanAuthor = author.replace(/[未知作者]/g, '').trim();
+  // Take only the first author if there are multiple or if it's a category
+  const cleanAuthor = author.split(',')[0].replace(/[未知作者]/g, '').trim();
   
-  const query = `intitle:${encodeURIComponent(cleanTitle)}${cleanAuthor ? `+inauthor:${encodeURIComponent(cleanAuthor)}` : ''}`;
-  const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
-  const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1${apiKey ? `&key=${apiKey}` : ''}`;
-
-  return new Promise((resolve) => {
-    https.get(url, (res) => {
-      let data = '';
-      res.on('data', (chunk) => data += chunk);
-      res.on('end', () => {
-        try {
-          const json = JSON.parse(data);
-          if (json.items && json.items[0]?.volumeInfo?.imageLinks) {
-            const links = json.items[0].volumeInfo.imageLinks;
-            resolve(links.thumbnail || links.smallThumbnail || null);
-          } else {
+  async function search(q) {
+    const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=1${apiKey ? `&key=${apiKey}` : ''}`;
+    
+    return new Promise((resolve) => {
+      https.get(url, (res) => {
+        if (res.statusCode !== 200) {
+          console.error(`    API Error: ${res.statusCode} for ${q}`);
+          resolve(null);
+          return;
+        }
+        let data = '';
+        res.on('data', (chunk) => data += chunk);
+        res.on('end', () => {
+          try {
+            const json = JSON.parse(data);
+            if (json.items && json.items[0]?.volumeInfo?.imageLinks) {
+              const links = json.items[0].volumeInfo.imageLinks;
+              resolve(links.thumbnail || links.smallThumbnail || null);
+            } else {
+              resolve(null);
+            }
+          } catch (e) {
+            console.error(`    JSON Error: ${e.message}`);
             resolve(null);
           }
-        } catch (e) {
-          resolve(null);
-        }
+        });
+      }).on('error', (err) => {
+        console.error(`    Network Error: ${err.message}`);
+        resolve(null);
       });
-    }).on('error', () => resolve(null));
-  });
+    });
+  }
+
+  // Try 1: Title + Author
+  let cover = await search(`intitle:${cleanTitle} inauthor:${cleanAuthor}`);
+  if (cover) return cover;
+
+  await sleep(500); // Rate limit between searches for the same book
+
+  // Try 2: Title only
+  cover = await search(`intitle:${cleanTitle}`);
+  return cover;
 }
 
 function parseCsv(csvData) {
