@@ -139,8 +139,46 @@ async function sync() {
       fetchSheet(CHILDREN_CSV_URL)
     ]);
 
-    const books = parseCsv(adultsCsv);
-    const childrenBooks = parseCsv(childrenCsv);
+    let books = parseCsv(adultsCsv);
+    let childrenBooks = parseCsv(childrenCsv);
+
+    const cache = loadCache();
+    const missingCovers = [];
+    const UNSPLASH_PLACEHOLDER = 'https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400';
+
+    async function enrichBooks(bookList, type) {
+      console.log(`Enriching ${type} covers...`);
+      for (let i = 0; i < bookList.length; i++) {
+        const book = bookList[i];
+        // Only enrich if it's using the placeholder
+        if (book.coverImage === UNSPLASH_PLACEHOLDER) {
+          const cacheKey = `${book.title}|${book.author}`;
+          if (cache[cacheKey]) {
+            book.coverImage = cache[cacheKey];
+          } else {
+            console.log(`  Fetching cover for: ${book.title}`);
+            const newCover = await fetchCoverFromGoogle(book.title, book.author);
+            if (newCover) {
+              book.coverImage = newCover;
+              cache[cacheKey] = newCover;
+            } else {
+              missingCovers.push(`${type}: ${book.title} (${book.author})`);
+            }
+            await sleep(300); // Rate limit
+          }
+        }
+      }
+    }
+
+    await enrichBooks(books, 'Adult');
+    await enrichBooks(childrenBooks, 'Children');
+
+    saveCache(cache);
+
+    if (missingCovers.length > 0) {
+      fs.writeFileSync(path.join(__dirname, 'missing_covers.log'), missingCovers.join('\n'));
+      console.log(`Log created for ${missingCovers.length} missing covers.`);
+    }
 
     const output = {
       lastUpdated: new Date().toISOString(),
