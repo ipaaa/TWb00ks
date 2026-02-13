@@ -69,8 +69,12 @@ This is a curated website for books and documentaries related to Taiwan's democr
     - **現狀:** 部分書籍使用 Unsplash 預設圖。 -> which is unreliable
     - **發現:** 博客來封面圖具有規律的 Sharding 邏輯：`https://www.books.com.tw/img/[ID前3碼]/[ID中3碼]/[ID 7-8碼]/[完整ID].jpg`。 the product url should be already available in the sheet, eg: https://www.books.com.tw/products/0010910448?sloc=main
     - **進度:** 已建立 `utils/bookCover.ts` 處理博客來圖片邏輯，下一步需確保 Google Sheet 中包含正確的產品 ID。
+- [ ] **多平台購書連結 (Multi-platform Purchase Links):** 新增網路書店和電子書按鈕（金石堂、誠品、momo、讀冊、kobo、讀墨）。
+- [ ] **影音資料 SSOT 同步 (Video Data SSOT Sync):** 從 SSOT 匯入紀錄片影視片單，具有分類、說明、tag。
+- [ ] **新增「關於本站」分頁 (About Page):** 新增關於本站的介紹與說明頁面。
 - [ ] **細部 UI/UX 優化:**
     - 增加深色模式 (Dark Mode)。
     - 優化行動裝置體驗。
 - [ ] **SEO 優化:**
     - 為每個頁面添加適當的 Meta Tags。
+
