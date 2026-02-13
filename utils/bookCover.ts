@@ -36,5 +36,5 @@ export const getBookCoverUrl = (book: Book): string => {
         return book.coverImage.replace('http://', 'https://');
     }
 
-    return book.coverImage || 'https://images.unsplash.com/photo-1544648156-5388451882c5?q=80&w=400';
+    return book.coverImage || `${import.meta.env.BASE_URL}default-book-cover.png`;
 };
