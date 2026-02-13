@@ -30,8 +30,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                   key={item.path}
                   to={item.path}
                   className={`flex items-center space-x-1.5 px-4 py-2 rounded-full text-sm font-bold transition-all ${location.pathname === item.path
-                      ? 'text-rose-700 bg-rose-50 shadow-sm'
-                      : 'text-stone-600 hover:text-rose-600 hover:bg-stone-50'
+                    ? 'text-rose-700 bg-rose-50 shadow-sm'
+                    : 'text-stone-600 hover:text-rose-600 hover:bg-stone-50'
                     }`}
                 >
                   {item.icon}
