@@ -4,6 +4,8 @@ export interface PurchaseLinks {
   eslite: string;
   kingstone: string;
   nlpi?: string;
+  readmoo?: string;
+  kobo?: string;
 }
 
 export type ReadingLevel = 'basic' | 'intermediate' | 'advanced';

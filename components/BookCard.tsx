@@ -1,7 +1,7 @@
 
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Book } from '../types';
-import { Library, ExternalLink, Hash, ShoppingCart } from 'lucide-react';
+import { Library, ExternalLink, Hash, ShoppingCart, ChevronDown } from 'lucide-react';
 import { getBookCoverUrl } from '../utils/bookCover';
 
 interface BookCardProps {
@@ -10,6 +10,25 @@ interface BookCardProps {
 }
 
 const BookCard: React.FC<BookCardProps> = ({ book, onTagClick }) => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const purchaseOptions = [
+    { name: '博客來', url: book.links.books },
+    ...(book.links.readmoo ? [{ name: 'Readmoo 讀墨', url: book.links.readmoo }] : []),
+    ...(book.links.kobo ? [{ name: 'Kobo', url: book.links.kobo }] : []),
+  ];
   return (
     <div className="group bg-white dark:bg-stone-800 rounded-lg shadow-sm hover:shadow-md dark:shadow-stone-900/50 transition-all duration-300 overflow-hidden border border-stone-200 dark:border-stone-700 flex flex-col h-full relative">
       <div className="relative aspect-[3/4] overflow-hidden bg-stone-100 dark:bg-stone-700">
@@ -53,15 +72,46 @@ const BookCard: React.FC<BookCardProps> = ({ book, onTagClick }) => {
 
         <div className="pt-2.5 border-t border-stone-100 dark:border-stone-700">
           <div className="grid grid-cols-2 gap-2">
-            <a
-              href={book.links.books}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex py-1.5 bg-stone-900 dark:bg-rose-700 hover:bg-rose-800 dark:hover:bg-rose-600 text-white text-[9px] font-bold rounded items-center justify-center space-x-1 transition-colors shadow-sm"
-            >
-              <ShoppingCart size={10} />
-              <span>網路購書</span>
-            </a>
+            {purchaseOptions.length === 1 ? (
+              <a
+                href={book.links.books}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex py-1.5 bg-stone-900 dark:bg-rose-700 hover:bg-rose-800 dark:hover:bg-rose-600 text-white text-[9px] font-bold rounded items-center justify-center space-x-1 transition-colors shadow-sm"
+              >
+                <ShoppingCart size={10} />
+                <span>網路購書</span>
+              </a>
+            ) : (
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="w-full flex py-1.5 bg-stone-900 dark:bg-rose-700 hover:bg-rose-800 dark:hover:bg-rose-600 text-white text-[9px] font-bold rounded items-center justify-center space-x-1 transition-colors shadow-sm"
+                >
+                  <ShoppingCart size={10} />
+                  <span>網路購書</span>
+                  <ChevronDown size={10} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                {isDropdownOpen && (
+                  <div className="absolute bottom-full left-0 right-0 mb-1 bg-white dark:bg-stone-800 rounded shadow-lg border border-stone-200 dark:border-stone-700 overflow-hidden z-10">
+                    {purchaseOptions.map((option, index) => (
+                      <a
+                        key={index}
+                        href={option.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between px-3 py-2 hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-900 dark:text-stone-100 text-[10px] font-medium transition-colors"
+                        onClick={() => setIsDropdownOpen(false)}
+                      >
+                        <span>{option.name}</span>
+                        <ExternalLink size={9} className="ml-1" />
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
 
             <a
               href={book.links.nlpi}
