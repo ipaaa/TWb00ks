@@ -21,12 +21,14 @@ import SEO from './components/SEO';
 import { BOOKS, CHILDREN_BOOKS, DOCUMENTARIES } from './constants';
 import { routes } from './routes';
 
+const hasDisplayImage = (image: string | undefined): boolean => Boolean(image?.trim());
+
 const BooksView: React.FC = () => {
   const [filterTag, setFilterTag] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   const filteredBooks = useMemo(() => {
-    let books = BOOKS;
+    let books = BOOKS.filter((book) => hasDisplayImage(book.coverImage));
 
     // 1. Tag Filter
     if (filterTag) {
@@ -225,8 +227,9 @@ const ChildrenView: React.FC = () => {
   const [filterTag, setFilterTag] = useState<string | null>(null);
 
   const filteredChildrenBooks = useMemo(() => {
-    if (!filterTag) return CHILDREN_BOOKS;
-    return CHILDREN_BOOKS.filter((book) => book.tags?.includes(filterTag));
+    const booksWithCovers = CHILDREN_BOOKS.filter((book) => hasDisplayImage(book.coverImage));
+    if (!filterTag) return booksWithCovers;
+    return booksWithCovers.filter((book) => book.tags?.includes(filterTag));
   }, [filterTag]);
 
   return (
@@ -270,7 +273,7 @@ const DocumentariesView: React.FC = () => {
   const groupedDocs = useMemo(() => {
     const groups: Record<string, typeof DOCUMENTARIES> = {};
 
-    DOCUMENTARIES.forEach((doc) => {
+    DOCUMENTARIES.filter((doc) => hasDisplayImage(doc.thumbnail)).forEach((doc) => {
       const tags = doc.tags && doc.tags.length > 0 ? doc.tags : ['其他影片'];
       tags.forEach((tag) => {
         if (!groups[tag]) groups[tag] = [];
