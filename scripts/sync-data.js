@@ -311,6 +311,7 @@ function fetchSheet(url) {
         if (res.statusCode === 301 || res.statusCode === 302 || res.statusCode === 307) {
           return resolve(fetchSheet(res.headers.location));
         }
+        res.setEncoding('utf8');
         let data = '';
         res.on('data', (chunk) => (data += chunk));
         res.on('end', () => resolve(data));
@@ -395,12 +396,7 @@ async function sync() {
     documentaries.sort((a, b) => a._sortOrder - b._sortOrder);
     documentaries = documentaries.map(({ _sortOrder, ...doc }) => doc);
 
-    const output = {
-      lastUpdated: new Date().toISOString(),
-      books,
-      childrenBooks,
-      documentaries,
-    };
+    const output = { books, childrenBooks, documentaries };
 
     const content = `export const sheetData = ${JSON.stringify(output, null, 2)};`;
     fs.writeFileSync(path.join(__dirname, '../books_data.ts'), content);
