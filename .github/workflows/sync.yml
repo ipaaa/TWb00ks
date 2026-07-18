@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - name: Set up Node.js
@@ -20,8 +21,15 @@ jobs:
         run: node scripts/sync-data.js
         env:
           GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_API_KEY }}
-      - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Create sync pull request
+        uses: peter-evans/create-pull-request@v8.1.1
         with:
-          commit_message: "chore: update book data"
-          branch: main
+          add-paths: |
+            books_data.ts
+            public/assets
+          base: main
+          branch: automation/sync-book-data
+          commit-message: "chore: update book data"
+          delete-branch: true
+          title: "chore: update book data"
+          body: "Automated synchronization from the source spreadsheet."
