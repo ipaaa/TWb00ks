@@ -18,6 +18,7 @@ This is a curated website for books and documentaries related to Taiwan's democr
 - **本地圖資儲存 (Local Image Storage):** 採用本地儲存方案，同步時自動下載海報與封面圖至 `public/assets/`，徹底解決外部擋圖與 CORS 問題。
 - **智能圖片代理 (Smart Image Proxy):** 對於尚未同步的外部連結，自動透過 `wsrv.nl` 進行代理與優化，確保圖片加載穩定性。
 - **封面圖自動產出 (Automated Covers):** 建立博客來封面圖 sharding 邏輯，確保書籍封面精準度。
+- **完整圖卡展示 (Complete Image Cards):** 書單與紀錄片頁面僅顯示已有封面或海報的項目。
 
 ## 技術棧 / Tech Stack
 
