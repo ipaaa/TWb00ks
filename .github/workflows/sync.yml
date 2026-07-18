@@ -21,6 +21,8 @@ jobs:
         run: node scripts/sync-data.js
         env:
           GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_API_KEY }}
+      - name: Format generated data
+        run: npx biome format --write books_data.ts
       - name: Create sync pull request
         uses: peter-evans/create-pull-request@v8.1.1
         with:
